@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/IMG_Social-network/static/css/main.0f8fdae1.css",
-    "main.js": "/IMG_Social-network/static/js/main.6bc56843.js",
+    "main.css": "/IMG_Social-network/static/css/main.0cb4fd05.css",
+    "main.js": "/IMG_Social-network/static/js/main.cf4eda4d.js",
     "static/media/nature-wallpaper.jpg": "/IMG_Social-network/static/media/nature-wallpaper.d4ea0bf858746ad97fa6.jpg",
+    "static/media/IrinaPchelnikova.jpg": "/IMG_Social-network/static/media/IrinaPchelnikova.6a17a3407491b75a919b.jpg",
     "static/media/avatar.jpg": "/IMG_Social-network/static/media/avatar.095f0a5f07e918710bfe.jpg",
     "static/media/logo.png": "/IMG_Social-network/static/media/logo.fa43492c2b6f42be774f.png",
     "static/media/author.png": "/IMG_Social-network/static/media/author.13384bf700c11f359465.png",
     "index.html": "/IMG_Social-network/index.html",
-    "main.0f8fdae1.css.map": "/IMG_Social-network/static/css/main.0f8fdae1.css.map",
-    "main.6bc56843.js.map": "/IMG_Social-network/static/js/main.6bc56843.js.map"
+    "main.0cb4fd05.css.map": "/IMG_Social-network/static/css/main.0cb4fd05.css.map",
+    "main.cf4eda4d.js.map": "/IMG_Social-network/static/js/main.cf4eda4d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f8fdae1.css",
-    "static/js/main.6bc56843.js"
+    "static/css/main.0cb4fd05.css",
+    "static/js/main.cf4eda4d.js"
   ]
 }
