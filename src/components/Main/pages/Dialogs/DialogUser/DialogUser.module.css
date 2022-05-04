@@ -1,0 +1,30 @@
+.dialogItem {
+  margin-bottom: 5%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.dialogItem img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #6a6c75;
+}
+
+.about {
+  font-size: 14px;
+}
+
+.about i {
+  color: #86bb71;
+}
+
+.name {
+  color: #fff;
+  padding-bottom: 3%;
+}
+
+.status {
+  color: #92959e;
+}

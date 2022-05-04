@@ -1,11 +1,19 @@
-.item {
-  margin: 5%;
+.nav {
+  border-right: 2px solid rgb(141, 141, 141);
 }
 
-.link {
-  text-decoration: none;
-  color: black;
+.item {
+  margin: 5%;
   font-size: 24px;
   font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
+}
+
+a.active {
+  opacity: 0.6;
 }

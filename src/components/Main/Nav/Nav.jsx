@@ -1,33 +1,64 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import classes from './Nav.module.css';
 
 const Nav = () => {
   return (
     <nav className={classes.nav}>
       <div className={classes.item}>
-        <a className={classes.link} alt="messages-link">
+        <NavLink
+          to="/profile"
+          className={(navData) =>
+            navData.isActive ? classes.active : classes.link
+          }
+          alt="messages-link"
+        >
           Profile
-        </a>
+        </NavLink>
       </div>
       <div className={classes.item}>
-        <a className={classes.link} alt="messages-link">
+        <NavLink
+          to="/dialogs"
+          className={(navData) =>
+            navData.isActive ? classes.active : classes.link
+          }
+          alt="messages-link"
+        >
           Messages
-        </a>
+        </NavLink>
       </div>
       <div className={classes.item}>
-        <a className={classes.link} alt="messages-link">
+        <NavLink
+          to="/news"
+          className={(navData) =>
+            navData.isActive ? classes.active : classes.link
+          }
+          alt="messages-link"
+        >
           News
-        </a>
+        </NavLink>
       </div>
       <div className={classes.item}>
-        <a className={classes.link} alt="messages-link">
+        <NavLink
+          to="/music"
+          className={(navData) =>
+            navData.isActive ? classes.active : classes.link
+          }
+          alt="messages-link"
+        >
           Music
-        </a>
+        </NavLink>
       </div>
       <div className={classes.item}>
-        <a className={classes.link} alt="messages-link">
+        <NavLink
+          to="/settings"
+          className={(navData) =>
+            navData.isActive ? classes.active : classes.link
+          }
+          alt="messages-link"
+        >
           Settings
-        </a>
+        </NavLink>
       </div>
     </nav>
   );

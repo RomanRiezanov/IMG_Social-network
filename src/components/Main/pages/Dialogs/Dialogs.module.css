@@ -1,0 +1,33 @@
+.main {
+  background-color: rgba(6, 214, 16, 0.384);
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.dialogsBlock {
+  background-color: #444753;
+}
+
+.search {
+  padding: 5%;
+}
+
+input {
+  border-radius: 3px;
+  border: none;
+  padding: 14px;
+  color: white;
+  background: #6a6c75;
+  width: 75%;
+  font-size: 14px;
+}
+
+.icon {
+  position: relative;
+  left: -25px;
+  color: #fff;
+}
+
+.dialogs {
+  padding: 5%;
+}

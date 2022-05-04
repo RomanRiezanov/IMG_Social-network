@@ -1,12 +1,11 @@
 import React from 'react';
-import nature from '../../../resources/media/nature-wallpaper.jpg';
-import author from '../../../resources/media/author.png';
-import classes from './Profile.module.css';
-import Posts from './Posts/Posts';
+import classes from './ProfileInfo.module.css';
+import author from '../../../../../resources/media/author.png';
+import nature from '../../../../../resources/media/nature-wallpaper.jpg';
 
-const Profile = () => {
+const ProfileInfo = () => {
   return (
-    <div className={classes.main}>
+    <div>
       <div className={classes.block}>
         <img className={classes.img} src={nature} alt="nature" />
       </div>
@@ -23,9 +22,8 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <Posts />
     </div>
   );
 };
 
-export default Profile;
+export default ProfileInfo;
