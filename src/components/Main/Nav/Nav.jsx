@@ -1,8 +1,9 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import classes from './Nav.module.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import Friends from "./Friends/Friends";
+import classes from "./Nav.module.css";
 
-const Nav = () => {
+const Nav = ({ ...props }) => {
   return (
     <nav className={classes.nav}>
       <div className={classes.item}>
@@ -60,6 +61,7 @@ const Nav = () => {
           Settings
         </NavLink>
       </div>
+      <Friends friends={props.friends} />
     </nav>
   );
 };

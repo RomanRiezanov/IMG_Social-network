@@ -1,21 +1,31 @@
-import React from 'react';
-import Nav from './Nav/Nav';
-import Profile from './pages/Profile/Profile';
-import classes from './Main.module.css';
-import Dialogs from './pages/Dialogs/Dialogs';
-import { Route, Routes } from 'react-router-dom';
-import News from './pages/News/News';
-import Music from './pages/Music/Music';
-import Settings from './pages/Settings/Settings';
-import { dialogs } from '../..';
+import React from "react";
+import Nav from "./Nav/Nav";
+import Profile from "./pages/Profile/Profile";
+import classes from "./Main.module.css";
+import Dialogs from "./pages/Dialogs/Dialogs";
+import { Route, Routes } from "react-router-dom";
+import News from "./pages/News/News";
+import Music from "./pages/Music/Music";
+import Settings from "./pages/Settings/Settings";
 
-const Main = () => {
+const Main = ({ ...props }) => {
   return (
     <div className={classes.main}>
-      <Nav />
+      <Nav friends={props.sideBar.friends} />
       <Routes>
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/dialogs" element={<Dialogs dialogs={dialogs} />} />
+        <Route
+          path="/profile"
+          element={<Profile postsData={props.profilePage.postsData} />}
+        />
+        <Route
+          path="/dialogs"
+          element={
+            <Dialogs
+              dialogs={props.dialogsPage.dialogs}
+              messagesData={props.dialogsPage.messagesData}
+            />
+          }
+        />
         <Route path="/news" element={<News />} />
         <Route path="/music" element={<Music />} />
         <Route path="/settings" element={<Settings />} />

@@ -1,5 +1,4 @@
 import React from 'react';
-import { messagesData } from '../../../..';
 import Chat from './Chat/Chat';
 import classes from './Dialogs.module.css';
 import DialogUser from './DialogUser/DialogUser';
@@ -18,7 +17,7 @@ const Dialogs = ({ ...props }) => {
           ))}
         </div>
       </div>
-      <Chat messagesData={messagesData} />
+      <Chat messagesData={props.messagesData} />
     </div>
   );
 };
