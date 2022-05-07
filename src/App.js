@@ -4,15 +4,16 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 
-function App({ ...props }) {
+function App({ state, addPost }) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Main
-          sideBar={props.state.sideBar}
-          profilePage={props.state.profilePage}
-          dialogsPage={props.state.dialogsPage}
+          sideBar={state.sideBar}
+          profilePage={state.profilePage}
+          dialogsPage={state.dialogsPage}
+          addPost={addPost}
         />
       </div>
     </BrowserRouter>

@@ -31,3 +31,12 @@ export const state = {
     ],
   },
 };
+
+export const addPost = (text) => {
+  const post = {
+    id: 5,
+    message: text,
+    likes: 0,
+  };
+  state.profilePage.postsData.push(post);
+};

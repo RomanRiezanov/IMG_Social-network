@@ -1,9 +1,11 @@
-import React from 'react';
-import user from '../../../../../resources/media/IrinaPchelnikova.jpg';
-import classes from './Chat.module.css';
-import Message from './Message/Message';
+import React from "react";
+import user from "../../../../../resources/media/IrinaPchelnikova.jpg";
+import classes from "./Chat.module.css";
+import Message from "./Message/Message";
 
-const Chat = ({ ...props }) => {
+const Chat = ({ messagesData }) => {
+  const newMessage = React.createRef();
+
   return (
     <div className={classes.chat}>
       <div className={classes.chatHeader}>
@@ -21,10 +23,14 @@ const Chat = ({ ...props }) => {
         </div>
       </div>
       <div className={classes.chatHistory}>
-        {props.messagesData.map((message) => (
+        {messagesData.map((message) => (
           <Message message={message.message} key={message.id} />
         ))}
       </div>
+      <textarea ref={newMessage}></textarea>
+      <button onClick={() => console.log(newMessage.current.value)}>
+        Send
+      </button>
     </div>
   );
 };

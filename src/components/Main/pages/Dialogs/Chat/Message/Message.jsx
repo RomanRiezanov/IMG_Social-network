@@ -1,7 +1,7 @@
-import React from 'react';
-import classes from './Message.module.css';
+import React from "react";
+import classes from "./Message.module.css";
 
-const Message = ({ ...props }) => {
+const Message = ({ message }) => {
   return (
     <div className={classes.messageBlock}>
       <div className={classes.messageData}>
@@ -10,7 +10,7 @@ const Message = ({ ...props }) => {
         </span>
         <span className={classes.messageDataTime}>10:10 AM, Today</span>
       </div>
-      <div className={classes.message}>{props.message}</div>
+      <div className={classes.message}>{message}</div>
     </div>
   );
 };

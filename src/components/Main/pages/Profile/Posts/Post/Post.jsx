@@ -1,14 +1,14 @@
-import React from 'react';
-import classes from './Post.module.css';
-import avatar from '../../../../../../resources/media/avatar.jpg';
+import React from "react";
+import classes from "./Post.module.css";
+import avatar from "../../../../../../resources/media/avatar.jpg";
 
-const Post = ({ ...props }) => {
+const Post = ({ message, likesCounter }) => {
   return (
     <div className={classes.post}>
       <img className={classes.img} src={avatar} alt="" />
-      {props.message}
+      {message}
       <div>
-        <span>{props.likesCounter} Likes</span>
+        <span>{likesCounter} Likes</span>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
-import React from 'react';
-import Chat from './Chat/Chat';
-import classes from './Dialogs.module.css';
-import DialogUser from './DialogUser/DialogUser';
+import React from "react";
+import Chat from "./Chat/Chat";
+import classes from "./Dialogs.module.css";
+import DialogUser from "./DialogUser/DialogUser";
 
-const Dialogs = ({ ...props }) => {
+const Dialogs = ({ dialogs, messagesData }) => {
   return (
     <div className={classes.main}>
       <div className={classes.dialogsBlock}>
@@ -12,12 +12,12 @@ const Dialogs = ({ ...props }) => {
           <i className={`fa fa-search ${classes.icon}`}></i>
         </div>
         <div className={classes.dialogs}>
-          {props.dialogs.map((user) => (
+          {dialogs.map((user) => (
             <DialogUser name={user.name} status={user.status} key={user.id} />
           ))}
         </div>
       </div>
-      <Chat messagesData={props.messagesData} />
+      <Chat messagesData={messagesData} />
     </div>
   );
 };
