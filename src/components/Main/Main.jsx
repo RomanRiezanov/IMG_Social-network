@@ -18,7 +18,8 @@ const Main = ({ ...props }) => {
           element={
             <Profile
               postsData={props.profilePage.postsData}
-              addPost={props.addPost}
+              dispatch={props.dispatch}
+              newPostText={props.profilePage.newPostText}
             />
           }
         />
@@ -28,6 +29,9 @@ const Main = ({ ...props }) => {
             <Dialogs
               dialogs={props.dialogsPage.dialogs}
               messagesData={props.dialogsPage.messagesData}
+              userMessagesData={props.dialogsPage.userMessagesData}
+              newMessageText={props.dialogsPage.newMessageText}
+              dispatch={props.dispatch}
             />
           }
         />

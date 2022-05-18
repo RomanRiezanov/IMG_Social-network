@@ -1,13 +1,13 @@
-import React from 'react';
-import classes from './ProfileInfo.module.css';
-import author from '../../../../../resources/media/author.png';
-import nature from '../../../../../resources/media/nature-wallpaper.jpg';
+import React from "react";
+import classes from "./ProfileInfo.module.css";
+import author from "../../../../../resources/media/author.jpeg";
+import cover from "../../../../../resources/media/cover.png";
 
 const ProfileInfo = () => {
   return (
     <div>
       <div className={classes.block}>
-        <img className={classes.img} src={nature} alt="nature" />
+        <img className={classes.header_img} src={cover} alt="nature" />
       </div>
       <div>
         <div className={classes.profile}>

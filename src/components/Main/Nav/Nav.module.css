@@ -1,5 +1,10 @@
+.sideBar {
+  background: #ffffff;
+}
 .nav {
-  border-right: 2px solid rgb(141, 141, 141);
+  background: #e2e2e2;
+  padding: 20px;
+  margin-bottom: 5px;
 }
 
 .item {

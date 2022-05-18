@@ -1,10 +1,21 @@
 import React from "react";
+import {
+  addMessageActionCreator,
+  onMessageChangeActionCreator,
+} from "../../../../../redux/dialogs_reducer";
 import user from "../../../../../resources/media/IrinaPchelnikova.jpg";
 import classes from "./Chat.module.css";
 import Message from "./Message/Message";
+import MyMessage from "./Message/MyMessage";
 
-const Chat = ({ messagesData }) => {
-  const newMessage = React.createRef();
+const Chat = ({ messagesData, userMessagesData, newMessageText, dispatch }) => {
+  const addMessage = () => {
+    dispatch(addMessageActionCreator());
+  };
+
+  const onMessageChange = (event) => {
+    dispatch(onMessageChangeActionCreator(event.target.value));
+  };
 
   return (
     <div className={classes.chat}>
@@ -26,11 +37,16 @@ const Chat = ({ messagesData }) => {
         {messagesData.map((message) => (
           <Message message={message.message} key={message.id} />
         ))}
+        {userMessagesData.map((userMessage) => (
+          <MyMessage userMessage={userMessage.message} key={userMessage.id} />
+        ))}
       </div>
-      <textarea ref={newMessage}></textarea>
-      <button onClick={() => console.log(newMessage.current.value)}>
-        Send
-      </button>
+      <textarea
+        onChange={onMessageChange}
+        value={newMessageText}
+        placeholder="Write a message..."
+      ></textarea>
+      <button onClick={addMessage}>Send</button>
     </div>
   );
 };

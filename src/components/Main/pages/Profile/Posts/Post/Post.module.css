@@ -1,8 +1,44 @@
 .post {
+  display: flex;
   margin-top: 10px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
 }
 
 .img {
   width: 7%;
   border-radius: 50%;
+}
+
+.about {
+  margin-left: 25px;
+  font-size: 14px;
+}
+
+.about i {
+  color: #86bb71;
+}
+
+.name {
+  color: #000000;
+  padding-bottom: 3%;
+}
+
+.status {
+  color: #92959e;
+}
+
+.message {
+  margin-top: 10px;
+}
+
+.message i {
+  color: #ff0000;
 }

@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-.img {
+.header_img {
   width: 100%;
 }
 
@@ -18,5 +18,9 @@
 }
 
 .authorImg {
+  position: relative;
+  top: -120px;
+  border: 7px solid #ffffff;
+  border-radius: 50%;
   width: 85%;
 }

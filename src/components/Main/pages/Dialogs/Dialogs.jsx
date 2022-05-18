@@ -3,7 +3,13 @@ import Chat from "./Chat/Chat";
 import classes from "./Dialogs.module.css";
 import DialogUser from "./DialogUser/DialogUser";
 
-const Dialogs = ({ dialogs, messagesData }) => {
+const Dialogs = ({
+  dialogs,
+  messagesData,
+  dispatch,
+  userMessagesData,
+  newMessageText,
+}) => {
   return (
     <div className={classes.main}>
       <div className={classes.dialogsBlock}>
@@ -17,7 +23,12 @@ const Dialogs = ({ dialogs, messagesData }) => {
           ))}
         </div>
       </div>
-      <Chat messagesData={messagesData} />
+      <Chat
+        messagesData={messagesData}
+        userMessagesData={userMessagesData}
+        dispatch={dispatch}
+        newMessageText={newMessageText}
+      />
     </div>
   );
 };

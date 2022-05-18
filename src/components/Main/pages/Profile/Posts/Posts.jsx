@@ -1,13 +1,19 @@
 import React from "react";
+import {
+  addPostActionCreator,
+  onPostChangeActionCreator,
+} from "../../../../../redux/profile_reducer";
 import Post from "./Post/Post";
 import classes from "./Posts.module.css";
 
 const Posts = ({ ...props }) => {
   const link = React.createRef();
-
   const addPost = () => {
-    console.log(link.current.value);
-    props.addPost(link.current.value);
+    props.dispatch(addPostActionCreator());
+  };
+
+  const onPostChange = () => {
+    props.dispatch(onPostChangeActionCreator(link.current.value));
   };
 
   return (
@@ -16,15 +22,13 @@ const Posts = ({ ...props }) => {
       <div className={classes.addPost}>
         <div>
           <textarea
+            onChange={onPostChange}
             ref={link}
-            name="add new post"
-            id=""
-            cols="50"
-            rows="5"
+            value={props.newPostText}
           ></textarea>
         </div>
         <div>
-          <button onClick={() => addPost(link.current.value)}>Add post</button>
+          <button onClick={addPost}>Add post</button>
         </div>
       </div>
       {props.postsData.map((post) => (
