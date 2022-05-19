@@ -41,7 +41,7 @@ const Chat = ({ messagesData, userMessagesData, newMessageText, dispatch }) => {
           <MyMessage userMessage={userMessage.message} key={userMessage.id} />
         ))}
       </div>
-      <div class={classes.messageForm}>
+      <div className={classes.messageForm}>
         <textarea
           rows="3"
           onChange={onMessageChange}
