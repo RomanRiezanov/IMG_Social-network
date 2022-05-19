@@ -3,16 +3,11 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main/Main";
 
-function App({ state, dispatch }) {
+function App({ store, dispatch }) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Main
-          sideBar={state.sideBar}
-          profilePage={state.profilePage}
-          dialogsPage={state.dialogsPage}
-          dispatch={dispatch}
-        />
+        <Main sideBar={store.sideBar} store={store} dispatch={dispatch} />
       </div>
     </BrowserRouter>
   );

@@ -15,25 +15,11 @@ const Main = ({ ...props }) => {
       <Routes>
         <Route
           path="/profile"
-          element={
-            <Profile
-              postsData={props.profilePage.postsData}
-              dispatch={props.dispatch}
-              newPostText={props.profilePage.newPostText}
-            />
-          }
+          element={<Profile store={props.store} dispatch={props.dispatch} />}
         />
         <Route
           path="/dialogs"
-          element={
-            <Dialogs
-              dialogs={props.dialogsPage.dialogs}
-              messagesData={props.dialogsPage.messagesData}
-              userMessagesData={props.dialogsPage.userMessagesData}
-              newMessageText={props.dialogsPage.newMessageText}
-              dispatch={props.dispatch}
-            />
-          }
+          element={<Dialogs store={props.store} dispatch={props.dispatch} />}
         />
         <Route path="/news" element={<News />} />
         <Route path="/music" element={<Music />} />
