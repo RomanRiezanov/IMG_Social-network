@@ -1,20 +1,22 @@
 import React from "react";
-import {
-  addMessageActionCreator,
-  onMessageChangeActionCreator,
-} from "../../../../../redux/dialogs_reducer";
 import user from "../../../../../resources/media/IrinaPchelnikova.jpg";
 import classes from "./Chat.module.css";
 import Message from "./Message/Message";
 import MyMessage from "./Message/MyMessage";
 
-const Chat = ({ messagesData, userMessagesData, newMessageText, dispatch }) => {
-  const addMessage = () => {
-    dispatch(addMessageActionCreator());
+const Chat = ({
+  messagesData,
+  userMessagesData,
+  newMessageText,
+  addMessage,
+  messageChange,
+}) => {
+  const onAddMessage = () => {
+    addMessage();
   };
 
   const onMessageChange = (event) => {
-    dispatch(onMessageChangeActionCreator(event.target.value));
+    messageChange(event.target.value);
   };
 
   return (
@@ -48,7 +50,7 @@ const Chat = ({ messagesData, userMessagesData, newMessageText, dispatch }) => {
           value={newMessageText}
           placeholder="Write a message..."
         ></textarea>
-        <button onClick={addMessage}>Send</button>
+        <button onClick={onAddMessage}>Send</button>
       </div>
     </div>
   );
