@@ -41,12 +41,15 @@ const Chat = ({ messagesData, userMessagesData, newMessageText, dispatch }) => {
           <MyMessage userMessage={userMessage.message} key={userMessage.id} />
         ))}
       </div>
-      <textarea
-        onChange={onMessageChange}
-        value={newMessageText}
-        placeholder="Write a message..."
-      ></textarea>
-      <button onClick={addMessage}>Send</button>
+      <div class={classes.messageForm}>
+        <textarea
+          rows="3"
+          onChange={onMessageChange}
+          value={newMessageText}
+          placeholder="Write a message..."
+        ></textarea>
+        <button onClick={addMessage}>Send</button>
+      </div>
     </div>
   );
 };

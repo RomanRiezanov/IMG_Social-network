@@ -1,6 +1,7 @@
 .chat {
-  background: #f2f5f8;
+  background: #e2e2e2;
   color: #434651;
+  scrollbar-width: thin;
 }
 
 .chatHeader {
@@ -44,7 +45,37 @@
 
 .chatHistory {
   padding: 30px 30px 20px;
-  border-bottom: 2px solid white;
+  border-bottom: 3px solid white;
   overflow-y: scroll;
   height: 575px;
+}
+
+.messageForm {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+textarea {
+  font: 14px/22px "Lato", Arial, sans-serif;
+  border: 1px solid #e2e2e2;
+  padding: 10px 20px;
+  border-radius: 5px;
+  resize: none;
+  width: 75%;
+}
+
+button {
+  height: 100%;
+  align-self: end;
+  color: #94c2ed;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #e2e2e2;
+}
+button:hover {
+  color: #49a1f3;
 }
