@@ -8,7 +8,7 @@ import News from "./pages/News/News";
 import Music from "./pages/Music/Music";
 import Settings from "./pages/Settings/Settings";
 
-const Main = ({ store }) => {
+const Main = () => {
   return (
     <div className={classes.main}>
       <Nav />

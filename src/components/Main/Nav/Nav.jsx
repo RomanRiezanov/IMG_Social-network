@@ -5,68 +5,33 @@ import Friends from "./Friends/Friends";
 import classes from "./Nav.module.css";
 
 const Nav = () => {
+  const SetClassName = (navData) => {
+    return navData.isActive ? classes.active : classes.link;
+  };
   return (
     <div className={classes.sideBar}>
-      <nav className={classes.nav}>
-        <div className={classes.item}>
-          <NavLink
-            to="/profile"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.link
-            }
-            alt="messages-link"
-          >
-            Profile
-          </NavLink>
-        </div>
-        <div className={classes.item}>
-          <NavLink
-            to="/dialogs"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.link
-            }
-            alt="messages-link"
-          >
-            Messages
-          </NavLink>
-        </div>
-        <div className={classes.item}>
-          <NavLink
-            to="/news"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.link
-            }
-            alt="messages-link"
-          >
-            News
-          </NavLink>
-        </div>
-        <div className={classes.item}>
-          <NavLink
-            to="/music"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.link
-            }
-            alt="messages-link"
-          >
-            Music
-          </NavLink>
-        </div>
-        <div className={classes.item}>
-          <NavLink
-            to="/settings"
-            className={(navData) =>
-              navData.isActive ? classes.active : classes.link
-            }
-            alt="messages-link"
-          >
-            Settings
-          </NavLink>
-        </div>
-      </nav>
       <StoreContext.Consumer>
         {(store) => {
-          return <Friends friends={store.getState().sideBar.friends} />;
+          const navLinks = store.getState().sideBar.navLinks;
+          return (
+            <>
+              <nav className={classes.nav}>
+                {navLinks.map((link) => (
+                  <div className={classes.item}>
+                    <NavLink
+                      to={link.to}
+                      className={SetClassName}
+                      alt={link.alt}
+                      id={link.id}
+                    >
+                      {link.name}
+                    </NavLink>
+                  </div>
+                ))}
+              </nav>
+              <Friends friends={store.getState().sideBar.friends} />;
+            </>
+          );
         }}
       </StoreContext.Consumer>
     </div>
