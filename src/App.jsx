@@ -3,11 +3,11 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main/Main";
 
-function App({ store, dispatch }) {
+function App({ store }) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Main sideBar={store.sideBar} store={store} dispatch={dispatch} />
+        <Main />
       </div>
     </BrowserRouter>
   );
