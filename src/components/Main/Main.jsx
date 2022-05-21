@@ -8,19 +8,13 @@ import News from "./pages/News/News";
 import Music from "./pages/Music/Music";
 import Settings from "./pages/Settings/Settings";
 
-const Main = ({ ...props }) => {
+const Main = ({ store }) => {
   return (
     <div className={classes.main}>
-      <Nav friends={props.sideBar.friends} />
+      <Nav />
       <Routes>
-        <Route
-          path="/profile"
-          element={<Profile store={props.store} dispatch={props.dispatch} />}
-        />
-        <Route
-          path="/dialogs"
-          element={<Dialogs store={props.store} dispatch={props.dispatch} />}
-        />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/dialogs" element={<Dialogs />} />
         <Route path="/news" element={<News />} />
         <Route path="/music" element={<Music />} />
         <Route path="/settings" element={<Settings />} />
