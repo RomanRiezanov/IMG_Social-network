@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main/Main";
 
-function App({ store }) {
+function App() {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
