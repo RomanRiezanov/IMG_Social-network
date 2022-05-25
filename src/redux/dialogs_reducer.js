@@ -27,10 +27,16 @@ export const dialogsReducer = (state = initialState, action) => {
       id: state.userMessagesData.length + 1,
       message: state.newMessageText,
     };
-    state.userMessagesData.push(userMessage);
-    state.newMessageText = "";
+    return {
+      ...state,
+      userMessagesData: [...state.userMessagesData, userMessage],
+      newMessageText: "",
+    };
   } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-    state.newMessageText = action.text;
+    return {
+      ...state,
+      newMessageText: action.text,
+    };
   }
   return state;
 };
