@@ -1,4 +1,3 @@
-import React from "react";
 import Profile from "./pages/Profile/Profile";
 import classes from "./Main.module.css";
 import { Route, Routes } from "react-router-dom";

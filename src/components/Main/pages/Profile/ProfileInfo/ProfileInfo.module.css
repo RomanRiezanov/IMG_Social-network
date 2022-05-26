@@ -22,5 +22,19 @@
   top: -120px;
   border: 7px solid #ffffff;
   border-radius: 50%;
-  width: 85%;
+  width: 200px;
+}
+
+@media (max-width: 1280px) {
+  .authorImg {
+    width: 150px;
+    top: -95px;
+  }
+}
+
+@media (max-width: 600px) {
+  .authorImg {
+    width: 100px;
+    top: -70px;
+  }
 }

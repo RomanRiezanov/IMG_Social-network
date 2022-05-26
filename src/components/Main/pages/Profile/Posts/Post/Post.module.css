@@ -13,7 +13,7 @@
 }
 
 .img {
-  width: 7%;
+  width: 100px;
   border-radius: 50%;
 }
 
@@ -41,4 +41,13 @@
 
 .message i {
   color: #ff0000;
+}
+
+@media (max-width: 1280px) {
+  .post {
+    padding: 10px;
+  }
+  .img {
+    width: 75px;
+  }
 }

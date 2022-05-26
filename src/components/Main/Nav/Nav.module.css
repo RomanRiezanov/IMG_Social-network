@@ -7,10 +7,21 @@
   margin-bottom: 5px;
 }
 
+.mobNav {
+  display: none;
+}
+
 .item {
   margin: 5%;
   font-size: 24px;
   font-weight: 600;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
 }
 
 a {
@@ -21,4 +32,71 @@ a {
 
 a.active {
   opacity: 0.6;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+    margin: 0;
+  }
+  .mobNav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .navItems {
+    display: flex;
+  }
+  .item {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobNav {
+    padding: 0;
+    z-index: 10;
+    justify-content: start;
+  }
+  .menu {
+    top: 5px;
+    display: block;
+    z-index: 2;
+  }
+  .menu span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #ffffff;
+    border-radius: 3px;
+
+    z-index: 2;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  .navItems {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    transform: translateY(-100%);
+    align-items: center;
+    transition: all 0.3s;
+  }
+  .navItems.active {
+    transform: translateY(0);
+    background-color: #e2e2e2;
+    opacity: 0.9;
+  }
+  .item {
+    margin: 7px;
+    font-size: 16px;
+    font-weight: 600;
+  }
 }
