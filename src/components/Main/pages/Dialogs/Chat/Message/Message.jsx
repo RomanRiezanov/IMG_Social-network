@@ -6,7 +6,7 @@ const Message = ({ message }) => {
     <div className={classes.messageBlock}>
       <div className={classes.messageData}>
         <span className={classes.messageDataName}>
-          <i className="fa fa-circle me"></i>Irina
+          <i className="fa fa-circle online"></i>Irina
         </span>
         <span className={classes.messageDataTime}>10:10 AM, Today</span>
       </div>

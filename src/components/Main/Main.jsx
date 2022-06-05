@@ -6,6 +6,7 @@ import Music from "./pages/Music/Music";
 import Settings from "./pages/Settings/Settings";
 import NavContainer from "./Nav/NavContainer";
 import DialogsContainer from "./pages/Dialogs/DialogsContainer";
+import UsersContainer from "./pages/Users/UsersContainer";
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
         <Route path="/news" element={<News />} />
         <Route path="/music" element={<Music />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/users" element={<UsersContainer />} />
       </Routes>
     </div>
   );
