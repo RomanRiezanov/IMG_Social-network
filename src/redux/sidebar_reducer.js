@@ -10,6 +10,7 @@ const initialState = {
     { id: 3, name: "News", to: "/news", alt: "news-link" },
     { id: 4, name: "Music", to: "/music", alt: "music-link" },
     { id: 5, name: "Settings", to: "/settings", alt: "settings-link" },
+    { id: 6, name: "Users", to: "/users", alt: "users-link" },
   ],
 };
 
